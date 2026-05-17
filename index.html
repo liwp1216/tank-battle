@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>坦克大战</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>坦克大战</h1>
+            <div class="info">
+                <span>得分: <span id="score">0</span></span>
+                <span>生命: <span id="lives">3</span></span>
+                <span>关卡: <span id="level">1</span></span>
+            </div>
+        </div>
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <div class="controls">
+            <div class="control-group">
+                <span class="key">W</span>
+                <span class="key">A</span>
+                <span class="key">S</span>
+                <span class="key">D</span>
+                <span>移动</span>
+            </div>
+            <div class="control-group">
+                <span class="key">空格</span>
+                <span>射击</span>
+            </div>
+            <div class="control-group">
+                <span class="key">P</span>
+                <span>暂停</span>
+            </div>
+        </div>
+        <div id="gameOver" class="overlay hidden">
+            <div class="overlay-content">
+                <h2 id="gameOverText">游戏结束</h2>
+                <p>最终得分: <span id="finalScore">0</span></p>
+                <button id="restartBtn">重新开始</button>
+            </div>
+        </div>
+        <div id="startScreen" class="overlay">
+            <div class="overlay-content">
+                <h2>坦克大战</h2>
+                <p>消灭所有敌方坦克，保护自己的基地！</p>
+                <button id="startBtn">开始游戏</button>
+            </div>
+        </div>
+        <div id="pauseScreen" class="overlay hidden">
+            <div class="overlay-content">
+                <h2>游戏暂停</h2>
+                <p>按 P 继续游戏</p>
+            </div>
+        </div>
+    </div>
+    <script src="js/game.js"></script>
+</body>
+</html>
